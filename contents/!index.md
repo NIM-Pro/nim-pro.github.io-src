@@ -1,5 +1,5 @@
 ---
-title: Main
+title: Wintersmith
 template: index.jade
 ---
 

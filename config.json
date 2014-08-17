@@ -1,6 +1,11 @@
 {
-  "locals": {
-    "title": "Bare minimum wintersmith site"
-  },
-  "output":"./nim-pro.github.io"
+    "locals": {
+        "title": "NotIntMan#prod.web-site"
+    },
+    "plugins": [
+        "wintersmith-less",
+        "wintersmith-coffee"
+    ],
+    "output":"./nim-pro.github.io",
+    "views":"./views"
 }
