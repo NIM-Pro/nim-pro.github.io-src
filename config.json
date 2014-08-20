@@ -1,6 +1,12 @@
 {
     "locals": {
-        "title": "NotIntMan#prod.web-site"
+        "title": "NotIntMan#prod.web-site",
+        "human": {
+            "name": "Dmitry Demin"
+        }
+    },
+    "require": {
+        "projects": "./projects.json"
     },
     "plugins": [
         "wintersmith-less",

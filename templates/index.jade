@@ -1,8 +1,18 @@
 doctype html
 html(lang='ru')
     head
-        meta(charset='utf-8')
-        title= locals.title
-        link(rel='stylesheet',href='index.css')
+        include head
     body
+        include top
+        .present
+            img(src='/images/yards.jpg')
         .container
+            .inline-block: .inside-block!= page.html
+            .inline-block: .inside-block
+                :markdown
+                    # Who am I?
+
+                    I am a free developer who just wants to show themselves and to find their place in this life.
+
+                    That's all.
+        include bottom

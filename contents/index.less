@@ -1,23 +1,110 @@
+@import "env.less";
+
+::selection {
+    background: @primaryColor;
+}
+
 body {
-    background: #000;
+    background: @backgroundColor;
+    margin: 0;
+    color: @textColor;
+    font-family: Open Sans Condensed;
 }
 
-.red {
-    background: #D03F3E;
-}
-
-.blue {
-    background: #70C9EF;
-}
-
-.green {
-    background: #72F499;
-}
-
-.yellow {
-    background: #F8C900;
+a {
+    color: @primaryColor;
 }
 
 .container {
-    max-width: 960px;
+    max-width: @containerWidth;
+    margin: 0 auto;
+}
+
+.inline-block {
+    vertical-align: top;
+    width: @blockWidth;
+    display: inline-block;
+}
+
+.bottom-block {
+    .inline-block;
+    width: @containerWidth/3;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.inside-block {
+    margin: 5px;
+}
+
+.gray-line {
+    height: 1px;
+    background: @gray;
+}
+
+.line {
+    height: 3px;
+    background: @primaryColor;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 50px;
+    width: @blockWidth;
+    text-transform: uppercase;
+    vertical-align: top;
+    display: inline-block;
+    &.right {
+        font-size: 40px;
+    }
+}
+
+.menu {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    width: @blockWidth;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    margin-left: @blockWidth;
+    border-top: 1px solid @primaryColor;
+    & li {
+        display: inline-block;
+        margin: 5px 15px;
+        & a {
+            text-decoration: none;
+            color: @textColor;
+        }
+        &.active a {
+            color: @primaryColor;
+        }
+    }
+}
+
+.present {
+    margin: 25px 0;
+    background: #E9E9E9;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.bottom {
+    margin-top: 50px;
+}
+
+@media (max-width: @containerWidth) {
+    .container, .author, .menu, .present img, .bottom-block, .inline-block {
+        display: block;
+        margin: 0 auto;
+        width: @blockWidth;
+    }
+}
+
+@media (max-width: @blockWidth) {
+    .container, .author, .menu, .present img, .bottom-block, .inline-block {
+        width: @mobileWidth;
+    }
 }

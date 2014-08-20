@@ -1,0 +1,14 @@
+mixin menuitem(name)
+    -if (page.metadata.active===name)
+        li.active: a(href='#')= name
+    -else
+        li: a(href='#')= name
+
+.container
+    .line
+    .author= locals.human.name
+    .author.right public production web-site
+    ul.menu
+        mixin menuitem('Home')
+        -each value,project in locals.projects
+            mixin menuitem(project)
